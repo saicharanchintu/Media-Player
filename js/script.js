@@ -220,18 +220,6 @@ const playMusic = function () {
   }
 };
 
-// const playMusic = function () {
-//   if (audioSource.paused) {
-//     audioSource.play();
-//     playBtn.classList.add("active");
-//     playInterval = setInterval(updateRunningTime, 500);
-//   } else {
-//     audioSource.pause();
-//     playBtn.classList.remove("active");
-//     clearInterval(playInterval);
-//   }
-// };
-
 playBtn.addEventListener("click", playMusic);
 
 /** update running time while playing music */
@@ -298,19 +286,9 @@ const isMusicEnd = function () {
 
     changePlayerInfo();
     changePlaylistItem();
-    playMusic(); // Start playing the next song in the queue
+    // playMusic(); // Start playing the next song in the queue
   }
 };
-
-// const isMusicEnd = function () {
-//   if (audioSource.ended) {
-//     playBtn.classList.remove("active");
-//     audioSource.currentTime = 0;
-//     playerSeekRange.value = audioSource.currentTime;
-//     playerRunningTime.textContent = getTimecode(audioSource.currentTime);
-//     updateRangeFill();
-//   }
-// };
 
 /**
  * SKIP TO NEXT MUSIC
